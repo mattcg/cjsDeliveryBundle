@@ -6,7 +6,7 @@
 
 	<parameters>
 		<parameter key="matt_cg.cjs_delivery_filter.class">MattCG\cjsDeliveryBundle\Assetic\Filter\cjsDeliveryFilter</parameter>
-		<parameter key="matt_cg.cjs_delivery_filter.minify_identifiers">%kernel.debug%</parameter>
+		<parameter key="matt_cg.cjs_delivery_filter.minify_identifiers">null</parameter>
 	</parameters>
 
 	<services>
