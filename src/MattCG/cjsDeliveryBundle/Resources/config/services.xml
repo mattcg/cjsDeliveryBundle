@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+	<parameters>
+		<parameter key="matt_cg.cjs_delivery_filter.class">MattCG\cjsDeliveryBundle\Assetic\Filter\cjsDeliveryFilter</parameter>
+		<parameter key="matt_cg.cjs_delivery_filter.minify_identifiers">%kernel.debug%</parameter>
+	</parameters>
+
+	<services>
+		<service id="matt_cg.cjs_delivery_filter" class="%matt_cg.cjs_delivery_filter.class%">
+			<tag name="assetic.filter" alias="cjs_delivery"></tag>
+			<call method="setMinifyIdentifiers">
+				<argument>%matt_cg.cjs_delivery_filter.minify_identifiers%</argument>
+			</call>
+		</service>
+	</services>
+</container>
