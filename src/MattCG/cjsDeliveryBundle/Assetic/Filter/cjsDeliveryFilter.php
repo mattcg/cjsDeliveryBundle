@@ -11,14 +11,14 @@ class cjsDeliveryFilter implements FilterInterface {
 
 	const EXT_JS = 'js';
 
-	private $minifyIdentifiers = false;
+	private $minifyidentifiers = false;
 
 	private function stripExtension($filepath) {
 		return preg_replace('/\.' . self::EXT_JS . '$/', '', $filepath);
 	}
 
-	public function setMinifyIdentifiers($minifyIdentifiers) {
-		$this->minifyIdentifiers = $minifyIdentifiers;
+	public function setMinifyIdentifiers($minifyidentifiers) {
+		$this->minifyidentifiers = $minifyidentifiers;
 	}
 
 	public function filterLoad(AssetInterface $asset) {}
@@ -27,8 +27,8 @@ class cjsDeliveryFilter implements FilterInterface {
 		$filepath = $asset->getSourceRoot() . '/' . $asset->getSourcePath();
 		$moduleidentifier = $this->stripExtension($filepath);
 
-		$delivery = DeliveryFactory::create(array('minifyIdentifiers' => $this->minifyIdentifiers));
-		$delivery->addModule($moduleidentifier);
+		$delivery = DeliveryFactory::create(array('minifyIdentifiers' => $this->minifyidentifiers));
+		$delivery->addModule($moduleidentifier, $asset->getContent());
 		$delivery->setMainModule($moduleidentifier);
 
 		$content = $delivery->getOutput();
