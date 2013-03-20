@@ -8,7 +8,7 @@ Based on [cjsDelivery](https://github.com/mattcg/cjsDelivery).
 
 ### Step 1 ###
 
-Add `mattcg/cjsdelivery-bundle` as a dependency in your project's `composer.json` file if you're using Composer to manage dependencies.
+Add `mattcg/cjsdelivery-bundle` as a dependency in your project's `composer.json` file if you're using [Composer](http://getcomposer.org/) to manage dependencies.
 
 ```JavaScript
 // composer.json
@@ -22,7 +22,7 @@ Add `mattcg/cjsdelivery-bundle` as a dependency in your project's `composer.json
 
 ### Step 2 ###
 
-Show Symfony how to use the cjsDelivery Assetic filter service.
+Show Symfony how to use the cjsDelivery [Assetic](http://symfony.com/doc/current/cookbook/assetic/index.html) filter service.
 
 ```YAML
 # app/config/config.yml
