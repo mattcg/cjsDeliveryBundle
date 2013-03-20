@@ -1,7 +1,7 @@
 {
-	"name": "mattcg/cjsdeliverybundle",
+	"name": "mattcg/cjsdelivery-bundle",
 	"version": "0.1.0",
-	"homepage": "https://github.com/mattcg/cjsdeliverybundle",
+	"homepage": "https://github.com/mattcg/cjsDeliveryBundle",
 	"description": "Symfony2 Bundle that provides CommonJS module compilation in the form of an Assetic filter. ",
 	"keywords": ["commonjs", "javascript", "modules", "symfony", "symfony2", "assetic", "filter", "assets"],
 	"license": "Creative Commons Attribution 3.0 Unported (CC BY 3.0)",
