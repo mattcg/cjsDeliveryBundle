@@ -41,7 +41,7 @@ assetic:
 
 This step is optional. Configure the filter in your Symfony parameters YAML file, as in the following example which uses all the available configuration options.
 
-```
+```YAML
 # app/config/parameters.yml
 parameters:
   matt_cg.cjs_delivery_filter.minify_identifiers: false
