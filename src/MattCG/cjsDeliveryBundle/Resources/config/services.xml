@@ -8,6 +8,9 @@
 		<parameter key="matt_cg.cjs_delivery_filter.class">MattCG\cjsDeliveryBundle\Assetic\Filter\cjsDeliveryFilter</parameter>
 		<parameter key="matt_cg.cjs_delivery_filter.minify_identifiers">null</parameter>
 		<parameter key="matt_cg.cjs_delivery_filter.includes">null</parameter>
+		<parameter key="matt_cg.cjs_delivery_filter.parse_pragmas">null</parameter>
+		<parameter key="matt_cg.cjs_delivery_filter.pragma_format">null</parameter>
+		<parameter key="matt_cg.cjs_delivery_filter.pragmas">null</parameter>
 	</parameters>
 
 	<services>
@@ -18,6 +21,15 @@
 			</call>
 			<call method="setIncludes">
 				<argument>%matt_cg.cjs_delivery_filter.includes%</argument>
+			</call>
+			<call method="setParsePragmas">
+				<argument>%matt_cg.cjs_delivery_filter.parse_pragmas%</argument>
+			</call>
+			<call method="setPragmaFormat">
+				<argument>%matt_cg.cjs_delivery_filter.pragma_format%</argument>
+			</call>
+			<call method="setPragmas">
+				<argument>%matt_cg.cjs_delivery_filter.pragmas%</argument>
 			</call>
 		</service>
 	</services>

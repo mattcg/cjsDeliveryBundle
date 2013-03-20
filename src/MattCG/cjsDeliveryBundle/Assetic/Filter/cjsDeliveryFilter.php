@@ -13,6 +13,9 @@ class cjsDeliveryFilter implements FilterInterface {
 
 	private $minifyidentifiers = false;
 	private $includes = null;
+	private $parsepragmas = false;
+	private $pragmaformat = null;
+	private $pragmas = null;
 
 	private function stripExtension($filepath) {
 		return preg_replace('/\.' . self::EXT_JS . '$/', '', $filepath);
@@ -26,6 +29,18 @@ class cjsDeliveryFilter implements FilterInterface {
 		$this->includes = $includes;
 	}
 
+	public function setPragmaFormat($pragmaformat) {
+		$this->pragmaformat = $pragmaformat;
+	}
+
+	public function setParsePragmas($parsepragmas) {
+		$this->parsepragmas = $parsepragmas;
+	}
+
+	public function setPragmas($pragmas) {
+		$this->pragmas = $pragmas;
+	}
+
 	public function filterLoad(AssetInterface $asset) {}
 
 	public function filterDump(AssetInterface $asset) {
@@ -35,6 +50,9 @@ class cjsDeliveryFilter implements FilterInterface {
 		$options = array();
 		$options['includes'] = $this->includes;
 		$options['minifyIdentifiers'] = $this->minifyidentifiers;
+		$options['parsePragmas'] = $this->parsepragmas;
+		$options['pragmas'] = $this->pragmas;
+		$options['pragmaFormat'] = $this->pragmaformat;
 
 		$delivery = DeliveryFactory::create($options);
 		$delivery->addModule($moduleidentifier, $asset->getContent());
